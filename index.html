@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>I really like math :D</title>
+    <meta
+      name="description"
+      content="Ultraviolet is a highly sophisticated proxy used for evading internet censorship or accessing websites in a controlled sandbox using the power of service-workers. Unblock sites today!"
+    />
+    <meta
+      name="keywords"
+      content="proxy, web proxy, ultraviolet, service workers, unblock websites, unblock chromebook, free web proxy, proxy list, proxy sites, un block chromebook, online proxy, proxy server, proxysite, proxy youtube, bypass securly, bypass iboss, bypass lightspeed filter, holy unblocker, chromebooks, titanium network, unblock youtube, youtube proxy, unblocked youtube, youtube unblocked"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#434c5e"
+    />
+    <meta name="googlebot" content="index, follow, snippet" />
+    <link rel="shortcut icon" content="favicon.ico" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="baremux/index.js" defer></script>
+    <script src="epoxy/index.js" defer></script>
+    <script src="uv/uv.bundle.js" defer></script>
+    <script src="uv/uv.config.js" defer></script>
+    <script src="register-sw.js" defer></script>
+    <script src="search.js" defer></script>
+    <script src="index.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Ultraviolet (Web Proxy)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Highly sophisticated proxy used for evading internet censorship or accessing websites in a controlled sandbox using the power of service-workers and more!"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I unblock sites using Ultraviolet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Simply head to an official site featuring Ultraviolet such as Holy Unblocker or Incognito! You can also self-host Ultraviolet on your own web server for maximum privacy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What if Ultraviolet is blocked or not working?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Join the Titanium Network Discord at discord.gg/unblock!"
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <div
+      title="Ultraviolet Logo"
+      class="flex-center logo-wrapper header-center"
+    >
+      <img src="image (1).png" alt="Ultraviolet Logo" style="margin: 10px; width: 500px; height: auto;">
+      <h1>Blancat chill pub</h1>
+    </div>
+    <div class="flex-center desc left-margin">
+      <p class="desc" id="random-message"></p>
+    </div>
+    <script>
+      const messages = [
+      "We know you're here to escape from your boring school.",
+      "Welcome to freedom! Enjoy your stay.",
+      "Looking to bypass those pesky restrictions?",
+      "Need a break? We got you covered!",
+      "Your gateway to unrestricted browsing.",
+      "Time for some unrestricted learning!",
+      "Welcome to the other side of the internet.",
+      "Ready to explore without limits?",
+      "You know? maybe cats are helpful for school.",
+      "If you get caught by the teacher dont blame it on the cat.",
+      "Purr-haps this is the best way to learn.",
+      "Cats make everything better, even school.",
+      "This cat is your new study proxy buddy.",
+      "Meow-tivate yourself to play freely!",
+      "Feline good about bypassing restrictions?",
+      "remember to put this link in an about:blank tab for better privacy.",
+      "If your school blocks this proxy, the silly cat (↑) will help you with new links.",
+      "ContentKeeper? More like ContentGatekeeper.",
+      "The cat fucking explodes the chromebook if he gets caught and suspended.",
+      "This cat is smarter than your school firewall. (obviously)",
+      "This cat is not responsible for any trouble you get into.",
+      "BREAKING NEWS: PLAYBOY CARTI CONFIRMES HE WILL BE PETTING THIS CAT AFTER SCHOOL",
+      "/ᐠ ˵> ⩊ <˵マ mrrow",
+    ""
+    ];
+
+      document.getElementById('random-message').textContent = 
+      messages[Math.floor(Math.random() * messages.length)];
+    </script>
+<script>
+  let lastSpawn = Date.now();
+  const SPAWN_DELAY = 100;
+
+  document.addEventListener('mousemove', function(e) {
+    if (Date.now() - lastSpawn < SPAWN_DELAY) return;
+    lastSpawn = Date.now();
+
+    const cats = ['🐱', '😺', '😸', '😹', '😻', '😼', '😽', '😾', '😿', '🐈'];
+    const emoji = document.createElement('span');
+    emoji.textContent = cats[Math.floor(Math.random() * cats.length)];
+    emoji.style.position = 'fixed';
+    emoji.style.left = e.clientX + 'px';
+    emoji.style.top = e.clientY + 'px';
+    emoji.style.pointerEvents = 'none';
+    emoji.style.userSelect = 'none';
+    emoji.style.color = 'white';
+    document.body.appendChild(emoji);
+
+    let moveX = (Math.random() - 0.5) * 40;
+    let moveY = -20;
+    let opacity = 1;
+
+    function animate() {
+      moveY += 0.5;
+      opacity -= 0.02;
+      emoji.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      emoji.style.opacity = opacity;
+
+      if (opacity > 0) {
+        requestAnimationFrame(animate);
+      } else {
+        emoji.remove();
+      }
+    }
+
+    requestAnimationFrame(animate);
+    setTimeout(() => emoji.remove(), 500);
+  });
+</script>
+    <form id="uv-form" class="flex-center">
+      <input
+        id="uv-search-engine"
+        value="https://www.qwant.com/?q=%s"
+        type="hidden"
+      />
+      <input id="uv-address" type="text" placeholder="Search the web freely" />
+    </form>
+    <div class="desc left-margin">
+      <p id="uv-error"></p>
+      <pre id="uv-error-code"></pre>
+    </div>
+    <footer>
+      <div>
+        <a
+          title="The TitaniumNetwork GitHub organization"
+          href="https://github.com/titaniumnetwork-dev"
+          >TitaniumNetwork</a
+        >
+        <a title="The TitaniumNetwork Discord" href="https://discord.gg/unblock"
+          >Discord</a
+        >
+        <a
+          title="The TompHTTP GitHub organization"
+          href="https://github.com/tomphttp"
+          >TompHTTP</a
+        >
+        <a
+          title="The official deployment repository for Ultraviolet"
+          href="https://github.com/titaniumnetwork-dev/Ultraviolet-App"
+          >GitHub</a
+        >
+        <a title="License information" href="credits.html">Credits</a>
+      </div>
+      <div>
+        <span>Ultraviolet &copy; TN 2023</span>
+      </div>
+    </footer>
+    <iframe style="display: none;" id="uv-frame"></iframe>
+  </body>
+</html>
